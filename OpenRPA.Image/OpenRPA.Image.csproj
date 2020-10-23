@@ -1,0 +1,158 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <Authors>Allan Zimmermann</Authors>
+    <Product>OpenRPA</Product>
+    <Description>A couple of activities and a Record plugin for handling Image recognition and doing basic OCR using OpenCV, created for OpenRPA robot</Description>
+    <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/open-rpa/openrpa</PackageProjectUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.27</Version>
+    <PackageReleaseNotes>1.0.27 Make x and y arguments for GetColor
+1.0.26 Exclude sap from recordings
+1.0.25 Add support for finding nested windows
+1.0.24 Add GetColor Activity
+1.0.23 Improve design expereince with image activites
+1.0.22 Change target framework to 4.7.2
+1.0.21 Remove debug info
+1.0.20 Add langauges and bug fixes
+1.0.18 Tweak input handling doing recording
+1.0.17 update reference
+1.0.16 fix double click
+1.0.14 update reference
+1.0.13 update interfaces reference
+1.0.12 support for seperate images 
+1.0.11 update interfaces reference</PackageReleaseNotes>
+    <PackageIcon>open_rpa128.png</PackageIcon>
+    <Configurations>Debug;Release;ReleaseNuget;PrepInstaller</Configurations>
+    <PackageTags>OpenRPA</PackageTags>
+    <RepositoryUrl>https://github.com/open-rpa/openrpa</RepositoryUrl>
+    <Platforms>AnyCPU;x86</Platforms>
+    <Company>OpenIAP</Company>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\debug</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <OutputPath>..\debug86</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\dist</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <OutputPath>..\dist</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='PrepInstaller|AnyCPU'">
+    <OutputPath></OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='PrepInstaller|x86'">
+    <OutputPath />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Resources\open_rpa128.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Activities\GetColorDesigner.xaml" />
+    <None Remove="Activities\GetElementDesigner.xaml" />
+    <None Remove="Activities\GetImageDesigner.xaml" />
+    <None Remove="Activities\GetTextDesigner.xaml" />
+    <None Remove="Activities\LoadFromFileDesigner.xaml" />
+    <None Remove="Activities\TakeScreenshotDesigner.xaml" />
+    <None Remove="Resources\check.png" />
+    <None Remove="Resources\designer\camera.png" />
+    <None Remove="Resources\designer\foreachimage.png" />
+    <None Remove="Resources\designer\getimage.png" />
+    <None Remove="Resources\designer\palette.png" />
+    <None Remove="Resources\designer\palette2.png" />
+    <None Remove="Resources\search.png" />
+    <None Remove="Resources\toolbox\camera.png" />
+    <None Remove="Resources\toolbox\foreachimage.png" />
+    <None Remove="Resources\toolbox\getimage.png" />
+    <None Remove="Resources\toolbox\palette.png" />
+    <None Remove="Resources\toolbox\palette2.png" />
+    <None Remove="Resources\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\check.png" />
+    <Resource Include="Resources\designer\palette.png" />
+    <Resource Include="Resources\designer\palette2.png" />
+    <EmbeddedResource Include="Resources\search.png" />
+    <EmbeddedResource Include="Resources\toolbox\camera.png" />
+    <EmbeddedResource Include="Resources\toolbox\foreachimage.png" />
+    <EmbeddedResource Include="Resources\toolbox\getimage.png" />
+    <EmbeddedResource Include="Resources\toolbox\palette.png" />
+    <EmbeddedResource Include="Resources\toolbox\palette2.png" />
+    <EmbeddedResource Include="Resources\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EMGU.CV" Version="4.1.1.3497" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Activities\GetColorDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Activities\GetElementDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Activities\TakeScreenshotDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Activities\LoadFromFileDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Activities\GetImageDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Activities\GetTextDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenRPA.Interfaces\OpenRPA.Interfaces.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\designer\camera.png" />
+    <Resource Include="Resources\designer\foreachimage.png" />
+    <Resource Include="Resources\designer\getimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\strings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>strings.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\strings.ru.resx">
+      <LastGenOutput>strings.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\strings.ro.resx">
+      <LastGenOutput>strings.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\strings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Target Name="PushNugetPackage" AfterTargets="Pack" Condition="'$(Configuration)' == 'ReleaseNuget'">
+    <Exec Command="nuget.exe push $(OutputPath)..\$(PackageId).$(PackageVersion).nupkg -Source nuget.org" />
+  </Target>
+  <Target Name="PostBuild" AfterTargets="Pack" Condition="'$(Configuration)' == 'Debug'">
+    <Exec Command="copy $(OutputPath)..\$(PackageId).$(PackageVersion).nupkg C:\code\OpenRPA\packages" />
+  </Target>
+  <Target Name="PostBuild" AfterTargets="Pack" Condition="'$(Configuration)' == 'PrepInstaller'">
+    <Exec Command="copy $(OutputPath)..\$(PackageId).$(PackageVersion).nupkg C:\code\OpenRPA\packages" />
+  </Target>
+  <ProjectExtensions><VisualStudio><UserProperties BuildVersion_StartDate="2000/1/1" /></VisualStudio></ProjectExtensions>
+</Project>

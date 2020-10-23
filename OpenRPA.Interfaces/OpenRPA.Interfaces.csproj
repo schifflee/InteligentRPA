@@ -1,0 +1,216 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <Authors>Allan Zimmermann</Authors>
+    <Product>OpenRPA</Product>
+    <Copyright></Copyright>
+    <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/open-rpa/openrpa</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/open-rpa/openrpa</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.51</Version>
+    <PackageReleaseNotes>1.0.51 Add support registry configuration
+1.0.50 Extend interfaces to access workflow instances
+1.0.49 Fix updating json, when using select button in selector
+1.0.48 Allow custom unique ids for xpath generation in nm
+1.0.47 Allow enter in selector, to allow copy n paste
+1.0.46 Add SetValue extension
+1.0.45 update settings with showloadingscreen
+1.0.44 extend NMElement
+1.0.43 Skip ui lookup on click, when noone is listening
+1.0.42 Fix bug when selecting object in selector UI
+1.0.41 Fix terminal server name pipe issue and add more logging features
+1.0.40 Add more settings
+1.0.39 fix small issue with maxresult when highlighting
+1.0.38 Add DesignerUpdater classes for easy type handling
+1.0.37 Change target framework to 4.7.2
+1.0.36 Add extension for getting has value on outargument
+1.0.35 Add support for checkboxes
+1.0.34 Add AsDateTable() to UIElement
+1.0.33 add queryas support
+1.0.32 Improve startup time of rdservice, add version info to login message
+1.0.31 Detect when other users have updated a workflow
+1.0.30 Updates
+1.0.29 Fix reconnect for RD Service, Add auto refresh
+1.0.28 Fix launch error for RDService
+1.0.27 Fix issue with "traverse back" recorder options when running with Japanese language
+1.0.26 Add support for moving and resizing windows
+1.0.25 Improve UIElement
+1.0.24 Add langauges and bug fixes
+1.0.20 Add some terminal service apis
+1.0.18 Tweak input handling doing recording
+1.0.17 Add better support for multiple users and install in program files
+1.0.16 fix double click
+1.0.15  limit update check to once a day, and add option to disable update check
+1.0.13 rewrite with interfaces
+1.0.11 Extend interfaces with workflow runners
+
+1.0.10 update references
+
+1.0.9 Added a Snippet interface, for addons to offers example snippets.
+
+1.0.8 Add generic version of AsyncTaskCodeActivity</PackageReleaseNotes>
+    <PackageIcon>open_rpa128.png</PackageIcon>
+    <Configurations>Debug;Release;ReleaseNuget;PrepInstaller</Configurations>
+    <Description>OpenRPA interfaces and tools, used to add functionality for OpenRPA robot</Description>
+    <PackageTags></PackageTags>
+    <Platforms>AnyCPU;x86</Platforms>
+    <Company>OpenIAP</Company>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\dist</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <OutputPath>..\dist</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='PrepInstaller|AnyCPU'">
+    <OutputPath></OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='PrepInstaller|x86'">
+    <OutputPath />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Resources\open_rpa128.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Resources\Selector\Button.png" />
+    <None Remove="Resources\Selector\Calendar.png" />
+    <None Remove="Resources\Selector\CheckBox.png" />
+    <None Remove="Resources\Selector\ComboBox.png" />
+    <None Remove="Resources\Selector\Custom.png" />
+    <None Remove="Resources\Selector\DataGrid.png" />
+    <None Remove="Resources\Selector\Document.png" />
+    <None Remove="Resources\Selector\Edit.png" />
+    <None Remove="Resources\Selector\Group.png" />
+    <None Remove="Resources\Selector\Header.png" />
+    <None Remove="Resources\Selector\HeaderItem.png" />
+    <None Remove="Resources\Selector\HyperLink.png" />
+    <None Remove="Resources\Selector\Image.png" />
+    <None Remove="Resources\Selector\Item.png" />
+    <None Remove="Resources\Selector\List.png" />
+    <None Remove="Resources\Selector\Menu.png" />
+    <None Remove="Resources\Selector\MenuItem.png" />
+    <None Remove="Resources\Selector\Pane.png" />
+    <None Remove="Resources\Selector\ProgressBar.png" />
+    <None Remove="Resources\Selector\RadioButton.png" />
+    <None Remove="Resources\Selector\ScrollBar.png" />
+    <None Remove="Resources\Selector\Slider.png" />
+    <None Remove="Resources\Selector\Spinner.png" />
+    <None Remove="Resources\Selector\SplitButton.png" />
+    <None Remove="Resources\Selector\StatusBar.png" />
+    <None Remove="Resources\Selector\Tab.png" />
+    <None Remove="Resources\Selector\Text.png" />
+    <None Remove="Resources\Selector\Thumb.png" />
+    <None Remove="Resources\Selector\TitleBar.png" />
+    <None Remove="Resources\Selector\ToolBar.png" />
+    <None Remove="Resources\Selector\ToolTip.png" />
+    <None Remove="Resources\Selector\Tree.png" />
+    <None Remove="Resources\Selector\Window.png" />
+    <None Remove="Selector\SelectorWindow.xaml" />
+    <None Remove="Views\KeyboardDetectorView.xaml" />
+    <None Remove="Views\KeyboardSeqWindow.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FlaUI.UIA3" Version="3.2.0">
+      <IncludeAssets></IncludeAssets>
+      <ExcludeAssets></ExcludeAssets>
+    </PackageReference>
+    <PackageReference Include="NLog" Version="4.6.8" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Selector\SelectorWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\KeyboardDetectorView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\KeyboardSeqWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenRPA.NamedPipeWrapper\OpenRPA.NamedPipeWrapper.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Controls.Ribbon" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Selector\Button.png" />
+    <Resource Include="Resources\Selector\Calendar.png" />
+    <Resource Include="Resources\Selector\CheckBox.png" />
+    <Resource Include="Resources\Selector\ComboBox.png" />
+    <Resource Include="Resources\Selector\Custom.png" />
+    <Resource Include="Resources\Selector\DataGrid.png" />
+    <Resource Include="Resources\Selector\Document.png" />
+    <Resource Include="Resources\Selector\Edit.png" />
+    <Resource Include="Resources\Selector\Group.png" />
+    <Resource Include="Resources\Selector\Header.png" />
+    <Resource Include="Resources\Selector\HeaderItem.png" />
+    <Resource Include="Resources\Selector\HyperLink.png" />
+    <Resource Include="Resources\Selector\Image.png" />
+    <Resource Include="Resources\Selector\Item.png" />
+    <Resource Include="Resources\Selector\List.png" />
+    <Resource Include="Resources\Selector\Menu.png" />
+    <Resource Include="Resources\Selector\MenuItem.png" />
+    <Resource Include="Resources\Selector\Pane.png" />
+    <Resource Include="Resources\Selector\ProgressBar.png" />
+    <Resource Include="Resources\Selector\RadioButton.png" />
+    <Resource Include="Resources\Selector\ScrollBar.png" />
+    <Resource Include="Resources\Selector\Slider.png" />
+    <Resource Include="Resources\Selector\Spinner.png" />
+    <Resource Include="Resources\Selector\SplitButton.png" />
+    <Resource Include="Resources\Selector\StatusBar.png" />
+    <Resource Include="Resources\Selector\Tab.png" />
+    <Resource Include="Resources\Selector\Text.png" />
+    <Resource Include="Resources\Selector\Thumb.png" />
+    <Resource Include="Resources\Selector\TitleBar.png" />
+    <Resource Include="Resources\Selector\ToolBar.png" />
+    <Resource Include="Resources\Selector\ToolTip.png" />
+    <Resource Include="Resources\Selector\Tree.png" />
+    <Resource Include="Resources\Selector\Window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\strings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>strings.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\strings.ru.resx">
+      <LastGenOutput>strings.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\strings.ro.resx">
+      <LastGenOutput>strings.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\strings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Target Name="PushNugetPackage" AfterTargets="Pack" Condition="'$(Configuration)' == 'ReleaseNuget'">
+    <Exec Command="nuget.exe push $(OutputPath)..\$(PackageId).$(PackageVersion).nupkg -Source nuget.org" />
+  </Target>
+  <Target Name="PostBuild" AfterTargets="Pack" Condition="'$(Configuration)' == 'Debug'">
+    <Exec Command="copy $(OutputPath)..\$(PackageId).$(PackageVersion).nupkg C:\code\OpenRPA\packages" />
+  </Target>
+  <Target Name="PostBuild" AfterTargets="Pack" Condition="'$(Configuration)' == 'PrepInstaller'">
+    <Exec Command="copy $(OutputPath)..\$(PackageId).$(PackageVersion).nupkg C:\code\OpenRPA\packages" />
+  </Target>
+  <ProjectExtensions><VisualStudio><UserProperties BuildVersion_StartDate="2000/1/1" /></VisualStudio></ProjectExtensions>
+</Project>

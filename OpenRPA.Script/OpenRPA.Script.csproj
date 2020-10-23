@@ -1,0 +1,167 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <Authors>Allan Zimmermann</Authors>
+    <Product>OpenRPA</Product>
+    <Description>A couple of activities to allow executing scripts and various different languages</Description>
+    <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/open-rpa/openrpa</PackageProjectUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <!--<NuspecFile>nuget.nuspec</NuspecFile>-->
+    <Version>1.0.29</Version>
+    <PackageReleaseNotes>1.0.29 Add implementation variables to code designer
+1.0.28 Add support for better serialization of variables to and from python
+1.0.27 massive improvements to python, add pipinstall activity
+1.0.26 Add toggle between embedded and locally installed python, Add PipInstall activity
+1.0.25 Change target framework to 4.7.2
+1.0.24 Fix print in python
+1.0.23 Begin implementing intellisense for C# and VB
+1.0.22 Add langauges and bug fixes
+1.0.20 update interfaces reference
+1.0.17 update reference
+1.0.16 update reference
+1.0.15 update interfaces reference
+1.0.14 bugfixes
+1.0.13 update interfaces reference</PackageReleaseNotes>
+    <PackageIcon>open_rpa128.png</PackageIcon>
+    <Configurations>Debug;Release;ReleaseNuget;PrepInstaller</Configurations>
+    <PackageTags>OpenRPA</PackageTags>
+    <RepositoryUrl>https://github.com/open-rpa/openrpa</RepositoryUrl>
+    <Platforms>AnyCPU;x86</Platforms>
+    <Company>OpenIAP</Company>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\debug</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <OutputPath>..\debug86</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\dist</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <OutputPath>..\dist</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='PrepInstaller|AnyCPU'">
+    <OutputPath></OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='PrepInstaller|x86'">
+    <OutputPath />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Resources\open_rpa128.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+  <Target Name="SetNuspecProperties" BeforeTargets="GenerateNuspec">
+    <PropertyGroup>
+      <NuspecProperties>$(NuspecProperties);id=$(AssemblyName)</NuspecProperties>
+      <NuspecProperties>$(NuspecProperties);config=$(Configuration)</NuspecProperties>
+      <NuspecProperties>$(NuspecProperties);version=$(PackageVersion)</NuspecProperties>
+      <NuspecProperties>$(NuspecProperties);description=$(Description)</NuspecProperties>
+      <NuspecProperties>$(NuspecProperties);author=$(Authors)</NuspecProperties>
+    </PropertyGroup>
+  </Target>
+  <ItemGroup>
+    <None Remove="Activities\Editor.xaml" />
+    <None Remove="Activities\InvokeCodeDesigner.xaml" />
+    <None Remove="Activities\PipInstallDesigner.xaml" />
+    <None Remove="lib\Python.Runtime.NETStandard.dll" />
+    <None Remove="Python.Runtime.NETStandard.dll" />
+    <None Remove="Resources\Autohotkey.xshd" />
+    <None Remove="Resources\designer\autohotkey.png" />
+    <None Remove="Resources\designer\comment.png" />
+    <None Remove="Resources\designer\prompt.png" />
+    <None Remove="Resources\ICSharpCode.PythonBinding.Resources.Python.xshd" />
+    <None Remove="Resources\toolbox\autohotkey.png" />
+    <None Remove="Resources\toolbox\comment.png" />
+    <None Remove="Resources\toolbox\prompt.png" />
+    <None Remove="Views\RecordPluginView.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\Python.Runtime.NETStandard.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\toolbox\autohotkey.png" />
+    <EmbeddedResource Include="Resources\toolbox\comment.png" />
+    <EmbeddedResource Include="Resources\toolbox\prompt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AvalonEdit" Version="6.0.1" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Features" Version="3.4.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Scripting" Version="3.4.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.VisualBasic.Features" Version="3.4.0" />
+    <PackageReference Include="Python.Included" Version="3.7.3.4" />
+    <PackageReference Include="sharpAHK" Version="1.0.0.5" />
+    <PackageReference Include="System.Management.Automation.dll" Version="10.0.10586" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Activities\PipInstallDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Activities\Editor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Activities\InvokeCodeDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RecordPluginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="System.Runtime" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Autohotkey.xshd" />
+    <Resource Include="Resources\designer\autohotkey.png" />
+    <Resource Include="Resources\designer\comment.png" />
+    <Resource Include="Resources\designer\prompt.png" />
+    <EmbeddedResource Include="Resources\ICSharpCode.PythonBinding.Resources.Python.xshd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenRPA.CodeEditor\OpenRPA.CodeEditor.csproj" />
+    <ProjectReference Include="..\OpenRPA.Interfaces\OpenRPA.Interfaces.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\strings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>strings.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\strings.ru.resx">
+      <LastGenOutput>strings.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\strings.ro.resx">
+      <LastGenOutput>strings.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\strings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Target Name="PushNugetPackage" AfterTargets="Pack" Condition="'$(Configuration)' == 'ReleaseNuget'">
+    <Exec Command="nuget.exe push $(OutputPath)..\$(PackageId).$(PackageVersion).nupkg -Source nuget.org" />
+  </Target>
+  <Target Name="PostBuild" AfterTargets="Pack" Condition="'$(Configuration)' == 'Debug'">
+    <Exec Command="copy $(OutputPath)..\$(PackageId).$(PackageVersion).nupkg C:\code\OpenRPA\packages" />
+  </Target>
+  <Target Name="PostBuild" AfterTargets="Pack" Condition="'$(Configuration)' == 'PrepInstaller'">
+    <Exec Command="copy $(OutputPath)..\$(PackageId).$(PackageVersion).nupkg C:\code\OpenRPA\packages" />
+  </Target>
+  <ProjectExtensions><VisualStudio><UserProperties BuildVersion_StartDate="2000/1/1" /></VisualStudio></ProjectExtensions>
+</Project>

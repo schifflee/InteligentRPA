@@ -1,0 +1,169 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/open-rpa/openrpa</PackageProjectUrl>
+    <Authors>Allan Zimmermann</Authors>
+    <Company>OpenIAP</Company>
+    <Product>OpenRPA</Product>
+    <Description>Recorder plugin and Activities for interacting with Chrome/Firefox and Edge, created for OpenRPA robot</Description>
+    <Version>1.0.45</Version>
+    <PackageReleaseNotes>1.0.45 Add support to update div value
+1.0.44 Fix issue with utf strings in update value
+1.0.43 Improve nm.WaitForDownload
+1.0.42 Add custom timeout on plugin messages and raise default timeout
+1.0.41 Add better support for windows elements in nm for chrome and edge
+1.0.40 Add IsChecked to nmelement
+1.0.39 Add WaitForVanish to NMElement
+1.0.38 Fix Download message from firefox
+1.0.37 Add WaitForDownload activity
+1.0.36 Fix ExecuteScript for Edge
+1.0.35 Add Values to nmelement to support multi selects
+1.0.34 change return type of executescript to object
+1.0.33 Fix addon after firefox update breaking things
+1.0.32 add SupportSelect
+1.0.31 Allow custom unique ids for xpath generation in nm
+1.0.30 Add frame id to treeview item
+1.0.29 Load all frames again, and add cords on getelement
+1.0.28 Fix issue with multiple frames and selector
+1.0.27 Improve iframe support
+1.0.26 add ng-model as a prefered id element
+1.0.25 Fix terminal server name pipe issue
+1.0.24 Improve nmelement.value parsing
+1.0.23 Change target framework to 4.7.2
+1.0.22 Add IsVisible, Display, isVisibleOnScreen and Disabled to NMElement
+1.0.21 Improve speed and click, and add support for variables in selector
+1.0.20 Add langauges
+1.0.18 update reference
+1.0.17 fix double click
+1.0.15 update interfaces reference
+1.0.14 support for seperate images 
+1.0.13 update interfaces reference</PackageReleaseNotes>
+    <PackageIcon>open_rpa128.png</PackageIcon>
+    <Configurations>Debug;Release;ReleaseNuget;PrepInstaller</Configurations>
+    <PackageTags>OpenRPA</PackageTags>
+    <RepositoryUrl>https://github.com/open-rpa/openrpa</RepositoryUrl>
+    <Platforms>AnyCPU;x86</Platforms>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\debug</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <OutputPath>..\debug86</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\dist</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <OutputPath>..\dist</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='PrepInstaller|AnyCPU'">
+    <OutputPath></OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='PrepInstaller|x86'">
+    <OutputPath />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Resources\open_rpa128.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Activities\CloseTabDesigner .xaml" />
+    <None Remove="Activities\Editor.xaml" />
+    <None Remove="Activities\ExecuteScriptDesigner.xaml" />
+    <None Remove="Activities\GetElementDesigner.xaml" />
+    <None Remove="Activities\OpenURLDesigner.xaml" />
+    <None Remove="Activities\WaitForDownloadDesigner.xaml" />
+    <None Remove="Resources\designer\detector.png" />
+    <None Remove="Resources\designer\gethtmlelement.png" />
+    <None Remove="Resources\toolbox\detector.png" />
+    <None Remove="Resources\toolbox\gethtmlelement.png" />
+    <None Remove="Snippets\ChromeGoogleSearch.xaml" />
+    <None Remove="Snippets\FirefoxGoogleSearch.xaml" />
+    <None Remove="Views\DownloadDetectorView.xaml" />
+    <None Remove="Views\RecordPluginView.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\designer\detector.png" />
+    <EmbeddedResource Include="Resources\toolbox\detector.png" />
+    <EmbeddedResource Include="Resources\toolbox\gethtmlelement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AvalonEdit" Version="6.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Activities\WaitForDownloadDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Activities\Editor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Activities\GetElementDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Activities\ExecuteScriptDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Activities\CloseTabDesigner .xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Activities\OpenURLDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DownloadDetectorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RecordPluginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenRPA.Interfaces\OpenRPA.Interfaces.csproj" />
+    <ProjectReference Include="..\OpenRPA.NativeMessagingHost\OpenRPA.NativeMessagingHost.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\designer\gethtmlelement.png" />
+    <Resource Include="Snippets\FirefoxGoogleSearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Resource Include="Snippets\ChromeGoogleSearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\strings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>strings.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\strings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Target Name="PushNugetPackage" AfterTargets="Pack" Condition="'$(Configuration)' == 'ReleaseNuget'">
+    <Exec Command="nuget.exe push $(OutputPath)..\$(PackageId).$(PackageVersion).nupkg -Source nuget.org" />
+  </Target>
+  <Target Name="PostBuild" AfterTargets="Pack" Condition="'$(Configuration)' == 'Debug'">
+    <Exec Command="copy $(OutputPath)..\$(PackageId).$(PackageVersion).nupkg C:\code\OpenRPA\packages" />
+  </Target>
+  <Target Name="PostBuild" AfterTargets="Pack" Condition="'$(Configuration)' == 'PrepInstaller'">
+    <Exec Command="copy $(OutputPath)..\$(PackageId).$(PackageVersion).nupkg C:\code\OpenRPA\packages" />
+  </Target>
+  <ProjectExtensions><VisualStudio><UserProperties BuildVersion_StartDate="2000/1/1" /></VisualStudio></ProjectExtensions>
+</Project>

@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "OpenRPA.RDService": {
+      "commandName": "Project"
+    }
+  }
+}
