@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenRPA.Java
+namespace OpenRPA.AI
 {
     class PluginConfig
     {
-        private static string pluginname => "Windows";
+        private static string pluginname => "AI";
         private static Config _globallocal = null;
         public static Config globallocal
         {
@@ -21,6 +21,7 @@ namespace OpenRPA.Java
                 return _globallocal;
             }
         }
-        public static bool auto_launch_java_bridge { get { return globallocal.GetProperty(pluginname, true); } set { globallocal.SetProperty(pluginname, value); } }
+        public static bool enable_xpath_support { get { return globallocal.GetProperty(pluginname, true); } set { globallocal.SetProperty(pluginname, value); } }
+        public static bool enable_caching_browser { get { return globallocal.GetProperty(pluginname, false); } set { globallocal.SetProperty(pluginname, value); } }
     }
 }

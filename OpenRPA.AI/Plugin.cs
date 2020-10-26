@@ -1,4 +1,7 @@
-﻿using OpenRPA.Input;
+﻿using FlaUI.Core.AutomationElements.Infrastructure;
+using FlaUI.Core.Conditions;
+using FlaUI.Core.Definitions;
+using OpenRPA.Input;
 using OpenRPA.Interfaces;
 using OpenRPA.Interfaces.Selector;
 using System;
@@ -8,18 +11,16 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
-namespace OpenRPA.Java
+namespace OpenRPA.AI
 {
-    public class Plugin : ObservableObject, IRecordPlugin
+    class Plugin : ObservableObject, IRecordPlugin
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "IDE1006")]
         public static treeelement[] _GetRootElements(Selector anchor)
         {
-            var result = new List<treeelement>();
-            
-            
-            return result.ToArray();
+            return null;
         }
         public treeelement[] GetRootElements(Selector anchor)
         {
@@ -27,7 +28,7 @@ namespace OpenRPA.Java
         }
         public Interfaces.Selector.Selector GetSelector(Selector anchor, Interfaces.Selector.treeelement item)
         {
-           return null ;
+            return null;
         }
         public event Action<IRecordPlugin, IRecordEvent> OnUserAction;
         public event Action<IRecordPlugin, IRecordEvent> OnMouseMove
@@ -35,106 +36,85 @@ namespace OpenRPA.Java
             add { }
             remove { }
         }
-        public string Name { get => "Java"; }
-        // public string Status => (hook!=null && hook.jvms.Count>0 ? "online":"offline");
-        private string _Status = "";
-        public string Status { get => _Status; }
-        private void SetStatus(string status)
-        {
-            _Status = status;
-            NotifyPropertyChanged("Status");
-        }
-        private Views.RecordPluginView view;
+        public string Name { get => "IE"; }
+        public string Status => "";
+        
         public System.Windows.Controls.UserControl editor
         {
             get
             {
-                if (view == null)
-                {
-                    view = new Views.RecordPluginView();
-                }
-                return view;
+                return null;
             }
         }
         public void Start()
         {
-           
+            OpenRPA.Input.InputDriver.Instance.CallNext = false;
+            InputDriver.Instance.OnMouseUp += OnMouseUp;
         }
         public void Stop()
         {
+            OpenRPA.Input.InputDriver.Instance.CallNext = true;
+            InputDriver.Instance.OnMouseUp -= OnMouseUp;
+        }
+        private void ParseMouseUp(InputEventArgs e)
+        {
+            try
+            {
+               
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.ToString());
+            }
+        }
+        private void OnMouseUp(InputEventArgs e)
+        {
+            var thread = new Thread(new ThreadStart(() =>
+            {
+                ParseMouseUp(e);
+            }));
+            thread.IsBackground = true;
+            thread.Start();
+        }
+        public bool ParseUserAction(ref IRecordEvent e) {
             
-        }
-        private void Hook_OnJavaShutDown(int vmID)
-        {
-            Log.Information("JavaShutDown: " + vmID);
-            NotifyPropertyChanged("Status");
-        }
-        //public JavaElement LastElement { get; set; }
-        
-        public bool ParseUserAction(ref IRecordEvent e)
-        {
-           
             return true;
         }
         public void Initialize(IOpenRPAClient client)
         {
-            // Javahook.Instance.init();
-            //try
-            //{
-            //    Javahook.Instance.init();
-            //}
-            //catch (Exception ex)
-            //{
-            //    Log.Error(ex.ToString());
-            //}
-            try
-            {
-                
-                //Task.Run(() =>
-                //{
-                //});
-                
-
-                //GenericTools.RunUI(() =>
-                //{
-                //});
-
-            }
-            catch (Exception ex)
-            {
-                Log.Error(ex, "");
-            }
-
+            _ = PluginConfig.enable_xpath_support;
         }
-       
         public IElement[] GetElementsWithSelector(Selector selector, IElement fromElement = null, int maxresults = 1)
         {
-            
             return null;
         }
         public IElement LaunchBySelector(Selector selector, bool CheckRunning, TimeSpan timeout)
         {
-            throw new NotImplementedException();
+            
+            return null;
         }
         public void CloseBySelector(Selector selector, TimeSpan timeout, bool Force)
         {
-            throw new NotImplementedException();
+            
         }
         public bool Match(SelectorItem item, IElement m)
         {
-            return true;
+            return false;
         }
         public bool ParseMouseMoveAction(ref IRecordEvent e)
         {
-            
+            if (e.UIElement == null) return false;
+            if (e.UIElement.ProcessId < 1) return false;
+            var p = System.Diagnostics.Process.GetProcessById(e.UIElement.ProcessId);
+            if (p.ProcessName != "iexplore" && p.ProcessName != "iexplore.exe") return false;
             return true;
         }
     }
     public class GetElementResult : IBodyActivity
     {
-        public GetElementResult()
+        public GetElementResult(GetElement activity)
         {
-            
+            Activity = activity;
         }
         public Activity Activity { get; set; }
         public void AddActivity(Activity a, string Name)
@@ -161,18 +141,19 @@ namespace OpenRPA.Java
     public class RecordEvent : IRecordEvent
     {
         public RecordEvent() { SupportVirtualClick = true; }
+        // public AutomationElement Element { get; set; }
         public UIElement UIElement { get; set; }
         public IElement Element { get; set; }
-        public Selector Selector { get; set; }
+        public Interfaces.Selector.Selector Selector { get; set; }
         public IBodyActivity a { get; set; }
         public bool SupportInput { get; set; }
         public bool SupportSelect { get; set; }
-        public bool ClickHandled { get; set; }
-        public bool SupportVirtualClick { get; set; }
         public int X { get; set; }
         public int Y { get; set; }
         public int OffsetX { get; set; }
         public int OffsetY { get; set; }
+        public bool ClickHandled { get; set; }
+        public bool SupportVirtualClick { get; set; }
         public MouseButton Button { get; set; }
     }
 
