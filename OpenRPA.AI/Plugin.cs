@@ -36,7 +36,7 @@ namespace OpenRPA.AI
             add { }
             remove { }
         }
-        public string Name { get => "IE"; }
+        public string Name { get => "AI"; }
         public string Status => "";
         
         public System.Windows.Controls.UserControl editor
@@ -95,7 +95,7 @@ namespace OpenRPA.AI
         }
         public void CloseBySelector(Selector selector, TimeSpan timeout, bool Force)
         {
-            
+            return;
         }
         public bool Match(SelectorItem item, IElement m)
         {

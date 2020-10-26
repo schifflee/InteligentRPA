@@ -28,11 +28,11 @@ namespace OpenRPA.AI
         }
         private void Open_Selector(object sender, RoutedEventArgs e)
         {
-           
+            return;
         }
         private void Highlight_Click(object sender, RoutedEventArgs e)
         {
-            
+            return;
         }
         public string ImageString
         {

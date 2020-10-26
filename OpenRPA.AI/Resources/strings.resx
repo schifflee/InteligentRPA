@@ -130,27 +130,33 @@
     <value>Open Selector</value>
   </data>
   <data name="activity_getelement_tooltip" xml:space="preserve">
-    <value>Find an Windows Java element based on selector</value>
+    <value>Find an Windows UI element based on selector</value>
   </data>
-  <data name="detector_highlight" xml:space="preserve">
-    <value>Highlight</value>
+  <data name="activity_openurl" xml:space="preserve">
+    <value>Open URL</value>
   </data>
-  <data name="detector_name" xml:space="preserve">
-    <value>Name</value>
+  <data name="activity_openurl_getcurrent" xml:space="preserve">
+    <value>Get current</value>
   </data>
-  <data name="detector_open_selector" xml:space="preserve">
-    <value>Open Selector</value>
+  <data name="activity_openurl_tooltip" xml:space="preserve">
+    <value>Open the specefied url in Internet Explorer</value>
   </data>
-  <data name="detector_select" xml:space="preserve">
-    <value>Select</value>
+  <data name="activity_waitforready" xml:space="preserve">
+    <value>Wait for ready</value>
   </data>
-  <data name="detector_selector" xml:space="preserve">
-    <value>Selector</value>
+  <data name="activity_waitforready_help" xml:space="preserve">
+    <value>Wait for page page to be ready / is not loading</value>
   </data>
-  <data name="plugin_auto_launch_java_bridge" xml:space="preserve">
-    <value>Auto launch</value>
+  <data name="enable_caching_browser" xml:space="preserve">
+    <value>Caching browser object</value>
   </data>
-  <data name="plugin_auto_launch_java_bridge_help" xml:space="preserve">
-    <value>Auto launch java bridge application when robot is running</value>
+  <data name="enable_caching_browser_help" xml:space="preserve">
+    <value>Save browser object, instead of searching for the window doing each call</value>
+  </data>
+  <data name="enable_xpath_support" xml:space="preserve">
+    <value>Enable XPath</value>
+  </data>
+  <data name="enable_xpath_support_help" xml:space="preserve">
+    <value>Enable experimental XPath support in IE</value>
   </data>
 </root>

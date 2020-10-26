@@ -16,9 +16,9 @@ namespace OpenRPA.AI
     [System.ComponentModel.Designer(typeof(GetElementDesigner), typeof(System.ComponentModel.Design.IDesigner))]
     [System.Drawing.ToolboxBitmap(typeof(GetElement), "Resources.toolbox.gethtmlelement.png")]
     [System.Windows.Markup.ContentProperty("Body")]
-    [LocalizedToolboxTooltip("activity_getelement_tooltip", typeof(strings))]
+    [LocalizedToolboxTooltip("activity_getelement_tooltip", typeof(Resources.strings))]
     
-    [LocalizedDisplayName("activity_getelement", typeof(strings))]
+    [LocalizedDisplayName("activity_getelement", typeof(Resources.strings))]
     public class GetElement : NativeActivity, System.Activities.Presentation.IActivityTemplateFactory
     {
         //[RequiredArgument]
@@ -32,7 +32,7 @@ namespace OpenRPA.AI
         [RequiredArgument]
         public InArgument<string> Selector { get; set; }
         
-        [LocalizedDisplayName("activity_waitforready", typeof(strings)), LocalizedDescription("activity_waitforready_help", typeof(strings))]
+        [LocalizedDisplayName("activity_waitforready", typeof(Resources.strings)), LocalizedDescription("activity_waitforready_help", typeof(Resources.strings))]
         public InArgument<bool> WaitForReady { get; set; }
         [Browsable(false)]
         public string Image { get; set; }
