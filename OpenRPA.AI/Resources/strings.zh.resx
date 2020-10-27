@@ -174,7 +174,7 @@
   <data name="activity_gettext_tooltip" xml:space="preserve">
     <value>使用OCR从图像中获取所有文本，可以限制为特定的单词或句子</value>
   </data>
-<data name="activity_getidtext" xml:space="preserve">
+  <data name="activity_getidtext" xml:space="preserve">
     <value>获得身份证文本</value>
   </data>
   <data name="activity_getidtext_drop_hint" xml:space="preserve">
@@ -188,5 +188,8 @@
   </data>
   <data name="activity_getidtext_tooltip" xml:space="preserve">
     <value>使用OCR从图像中获取所有文本，可以限制为特定的单词或句子</value>
+  </data>
+  <data name="activity_nlecnet" xml:space="preserve">
+    <value>文本纠错</value>
   </data>
 </root>

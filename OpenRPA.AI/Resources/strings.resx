@@ -174,7 +174,7 @@
   <data name="activity_gettext_tooltip" xml:space="preserve">
     <value>Using OCR get all text from a image, can be limited to a specific word or sentence</value>
   </data>
-<data name="activity_getidtext" xml:space="preserve">
+  <data name="activity_getidtext" xml:space="preserve">
     <value>Get Id Text</value>
   </data>
   <data name="activity_getidtext_drop_hint" xml:space="preserve">
@@ -188,5 +188,8 @@
   </data>
   <data name="activity_getidtext_tooltip" xml:space="preserve">
     <value>Using OCR get all text from a image, can be limited to a specific word or sentence</value>
+  </data>
+  <data name="activity_nlecnet" xml:space="preserve">
+    <value>text ecnet</value>
   </data>
 </root>

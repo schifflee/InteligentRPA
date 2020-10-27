@@ -36,6 +36,7 @@ namespace OpenRPA.AI
         [RequiredArgument]
         public InArgument<bool> CaseSensitive { get; set; } = false;
         public OutArgument<Newtonsoft.Json.Linq.JObject> Result { get; set; }
+        public OutArgument<String> OcrStatus { get; set; }
         [System.ComponentModel.Browsable(false)]
         public ActivityAction<ImageElement> Body { get; set; }
         private Variable<ImageElement[]> elements = new Variable<ImageElement[]>("elements");
@@ -136,8 +137,11 @@ namespace OpenRPA.AI
             ms.Close();
 
             var word_results = _ocr.Idcard(imageBytes, idCardSide);
-            context.SetValue(Result, word_results);
+            context.SetValue(Result, word_results["words_result"]);
 
+            var image_status = word_results["image_status"].ToString();
+            context.SetValue(OcrStatus, image_status);
+            
             //IEnumerator<ImageElement> _enum = result.ToList().GetEnumerator();
             //context.SetValue(_elements, _enum);
             //bool more = _enum.MoveNext();

@@ -65,7 +65,8 @@
     <None Remove="Activities\GetElementDesigner.xaml" />
     <None Remove="Activities\GetTextDesigner.xaml" />
 	<None Remove="Activities\GetIdTextDesigner.xaml" />
-    <None Remove="Resources\check.png" />
+	<None Remove="Activities\NLEcnetDesigner.xaml" />
+	<None Remove="Resources\check.png" />
     <None Remove="Resources\designer\camera.png" />
     <None Remove="Resources\designer\foreachimage.png" />
     <None Remove="Resources\designer\gethtmlelement.png" />
@@ -135,6 +136,9 @@
 	<Page Include="Activities\GetIdTextDesigner.xaml">
 	  <Generator>MSBuild:Compile</Generator>
 	</Page>
+	<Page Include="Activities\NLEcnetDesigner.xaml">
+	  <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\designer\camera.png" />
