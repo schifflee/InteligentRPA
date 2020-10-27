@@ -7,8 +7,10 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
-using SAPFEWSELib;
-using SapROTWr;
+//using SAPFEWSELib;
+//using SapROTWr;
+using sapfewse;
+using saprotwr.net;
 using System;
 using System.Collections.Generic;
 using System.Linq;

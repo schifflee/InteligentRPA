@@ -1,6 +1,7 @@
 ﻿using Emgu.CV;
 using Emgu.CV.CvEnum;
 using OpenRPA.Interfaces;
+using OpenRPA.Image;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -14,6 +15,8 @@ namespace OpenRPA.AI
 {
     public class ocr
     {
+        public const String API_KEY = "QHmjrKimnsG4wLjunxfQ3hrw";
+        public const String SECRET_KEY = "9CGl2t2cTbtbldbIKsogtOue3sxLlsAX";
         public static void TesseractDownloadLangFile(string folder, string lang)
         {
             if (!Directory.Exists(folder))
@@ -29,7 +32,7 @@ namespace OpenRPA.AI
                     System.Net.ServicePointManager.Expect100Continue = true;
                     System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls | System.Net.SecurityProtocolType.Tls11 | System.Net.SecurityProtocolType.Tls12 | System.Net.SecurityProtocolType.Ssl3;
                     // string source = string.Format("https://github.com/tesseract-ocr/tessdata/blob/4592b8d453889181e01982d22328b5846765eaad/{0}.traineddata?raw=true", lang);
-                    string source = string.Format("https://github.com/tesseract-ocr/tessdata/blob/master/{0}.traineddata?raw=true", lang);
+                    string source = string.Format("https://github.com/tesseract-ocr/tessdata/raw/master/{0}.traineddata?raw=true", lang);
                     System.Diagnostics.Trace.WriteLine(string.Format("Downloading file from '{0}' to '{1}'", source, dest));
                     webclient.DownloadFile(source, dest);
                     System.Diagnostics.Trace.WriteLine(string.Format("Download completed"));

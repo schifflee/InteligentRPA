@@ -315,6 +315,9 @@
   <data name="activity_movemouse_tooltip" xml:space="preserve">
     <value>将鼠标光标移动到相对于通过GetElement找到的元素的位置（如果没有提供元素，则移动到桌面）</value>
   </data>
+  <data name="activity_msgbox_text" xml:space="preserve">
+    <value>消息框</value>
+  </data>
   <data name="activity_offsetx" xml:space="preserve">
     <value>X Offset</value>
   </data>

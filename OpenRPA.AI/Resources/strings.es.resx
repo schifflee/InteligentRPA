@@ -121,7 +121,7 @@
 	<data name="activity_openurl_tooltip" xml:space="preserve">
 		<value>Abra la URL especificada en Internet Explorer</value>
 	</data>
-<data name="activity_gettext_drop_hint" xml:space="preserve">
+	<data name="activity_gettext_drop_hint" xml:space="preserve">
 		<value>Haga doble clic para ver</value>
 	</data>
 	<data name="activity_gettext_limit" xml:space="preserve">
@@ -134,6 +134,21 @@
 		<value>Obtener texto</value>
 	</data>
 	<data name="activity_gettext_tooltip" xml:space="preserve">
+		<value>El uso de OCR para obtener todo el texto de una imagen puede limitarse a una palabra u oración específica</value>
+	</data>
+	<data name="activity_getidtext_drop_hint" xml:space="preserve">
+		<value>Haga doble clic para ver</value>
+	</data>
+	<data name="activity_getidtext_limit" xml:space="preserve">
+		<value>Limitado a</value>
+	</data>
+	<data name="activity_getidtext_limit_hint" xml:space="preserve">
+		<value>Busca solo esta palabra</value>
+	</data>
+	<data name="activity_getidtext" xml:space="preserve">
+		<value>Obtener texto</value>
+	</data>
+	<data name="activity_getidtext_tooltip" xml:space="preserve">
 		<value>El uso de OCR para obtener todo el texto de una imagen puede limitarse a una palabra u oración específica</value>
 	</data>
 </root>

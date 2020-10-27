@@ -159,7 +159,7 @@
   <data name="enable_xpath_support_help" xml:space="preserve">
     <value>IE がサポートする実験的 XPath を有効化</value>
   </data>
-<data name="activity_gettext" xml:space="preserve">
+ <data name="activity_gettext" xml:space="preserve">
     <value>テキストを取得</value>
   </data>
   <data name="activity_gettext_drop_hint" xml:space="preserve">
@@ -172,6 +172,21 @@
     <value>Search only for this word</value>
   </data>
   <data name="activity_gettext_tooltip" xml:space="preserve">
+    <value>Using OCR get all text from a image, can be limited to a specific word or sentence</value>
+  </data>
+<data name="activity_getidtext" xml:space="preserve">
+    <value>IDテキストを取得</value>
+  </data>
+  <data name="activity_getidtext_drop_hint" xml:space="preserve">
+    <value>アクティビティをドロップ</value>
+  </data>
+  <data name="activity_getidtext_limit" xml:space="preserve">
+    <value>制限</value>
+  </data>
+  <data name="activity_getidtext_limit_hint" xml:space="preserve">
+    <value>Search only for this word</value>
+  </data>
+  <data name="activity_getidtext_tooltip" xml:space="preserve">
     <value>Using OCR get all text from a image, can be limited to a specific word or sentence</value>
   </data>
 </root>

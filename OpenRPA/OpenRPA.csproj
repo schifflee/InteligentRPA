@@ -237,7 +237,8 @@ Add toggle between embedded and locally installed python, Add PipInstall activit
     <None Remove="Activities\OpenApplicationDesigner.xaml" />
     <None Remove="Activities\ShowBalloonTipDesigner.xaml" />
     <None Remove="Activities\TypeTextDesigner.xaml" />
-    <None Remove="AgentWindow.xaml" />
+	<None Remove="Activities\MsgBoxDesigner.xaml" />
+	<None Remove="AgentWindow.xaml" />
     <None Remove="App.xaml" />
     <None Remove="Images\PinDocMenu_Black.png" />
     <None Remove="MainWindow.xaml" />
@@ -511,6 +512,9 @@ Add toggle between embedded and locally installed python, Add PipInstall activit
     <Page Include="Activities\TypeTextDesigner.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
+	<Page Include="Activities\MsgBoxDesigner.xaml">
+	  <Generator>MSBuild:Compile</Generator>
+	</Page>	  
     <Page Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>

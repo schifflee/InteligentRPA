@@ -64,6 +64,7 @@
     <None Remove="Activities\CommonOcr.xaml" />
     <None Remove="Activities\GetElementDesigner.xaml" />
     <None Remove="Activities\GetTextDesigner.xaml" />
+	<None Remove="Activities\GetIdTextDesigner.xaml" />
     <None Remove="Resources\check.png" />
     <None Remove="Resources\designer\camera.png" />
     <None Remove="Resources\designer\foreachimage.png" />
@@ -88,6 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OpenRPA.Interfaces\OpenRPA.Interfaces.csproj" />
+	<ProjectReference Include="..\OpenRPA.Image\OpenRPA.Image.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
@@ -130,6 +132,9 @@
     <Page Include="Activities\GetTextDesigner.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
+	<Page Include="Activities\GetIdTextDesigner.xaml">
+	  <Generator>MSBuild:Compile</Generator>
+	</Page>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\designer\camera.png" />

@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
-using SAPFEWSELib;
-using SapROTWr;
+//using SAPFEWSELib;
+using sapfewse;
+using saprotwr.net;
 using System;
 using System.Collections.Generic;
 using System.Linq;

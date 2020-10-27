@@ -106,24 +106,6 @@ namespace OpenRPA.AI.Resources {
         }
         
         /// <summary>
-        ///   查找类似 Get Text 的本地化字符串。
-        /// </summary>
-        public static string activity_gettext {
-            get {
-                return ResourceManager.GetString("activity_gettext", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 Drop activity 的本地化字符串。
-        /// </summary>
-        public static string activity_gettext_drop_hint {
-            get {
-                return ResourceManager.GetString("activity_gettext_drop_hint", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找类似 Open URL 的本地化字符串。
         /// </summary>
         public static string activity_openurl {
@@ -131,8 +113,32 @@ namespace OpenRPA.AI.Resources {
                 return ResourceManager.GetString("activity_openurl", resourceCulture);
             }
         }
-        
-		 /// <summary>
+
+
+        /// <summary>
+        ///   查找类似 Get Text 的本地化字符串。
+        /// </summary>
+        public static string activity_gettext
+        {
+            get
+            {
+                return ResourceManager.GetString("activity_gettext", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   查找类似 Drop activity 的本地化字符串。
+        /// </summary>
+        public static string activity_gettext_drop_hint
+        {
+            get
+            {
+                return ResourceManager.GetString("activity_gettext_drop_hint", resourceCulture);
+            }
+        }
+
+
+        /// <summary>
         ///   Looks up a localized string similar to Limit to.
         /// </summary>
         public static string activity_gettext_limit {
@@ -159,7 +165,64 @@ namespace OpenRPA.AI.Resources {
                 return ResourceManager.GetString("activity_gettext_tooltip", resourceCulture);
             }
         }
-		
+
+        /// <summary>
+        ///   查找类似 Get Text 的本地化字符串。
+        /// </summary>
+        public static string activity_getidtext
+        {
+            get
+            {
+                return ResourceManager.GetString("activity_getidtext", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   查找类似 Drop activity 的本地化字符串。
+        /// </summary>
+        public static string activity_getidtext_drop_hint
+        {
+            get
+            {
+                return ResourceManager.GetString("activity_getidtext_drop_hint", resourceCulture);
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to Limit to.
+        /// </summary>
+        public static string activity_getidtext_limit
+        {
+            get
+            {
+                return ResourceManager.GetString("activity_getidtext_limit", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Search only for this word.
+        /// </summary>
+        public static string activity_getidtext_limit_hint
+        {
+            get
+            {
+                return ResourceManager.GetString("activity_getidtext_limit_hint", resourceCulture);
+            }
+        }
+
+
+        /// <summary>
+        ///   Looks up a localized string similar to Using OCR get all text from a image, can be limited to a specific word or sentence.
+        /// </summary>
+        public static string activity_getidtext_tooltip
+        {
+            get
+            {
+                return ResourceManager.GetString("activity_getidtext_tooltip", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   查找类似 Get current 的本地化字符串。
         /// </summary>

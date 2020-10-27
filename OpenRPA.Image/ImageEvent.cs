@@ -11,7 +11,7 @@ namespace OpenRPA.Image
     using System.Drawing;
     using System.Linq;
     using System.Runtime.InteropServices;
-    class ImageEvent
+    public class ImageEvent
     {
         private ImageEvent() { }
         private Bitmap template;

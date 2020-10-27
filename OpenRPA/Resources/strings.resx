@@ -315,6 +315,9 @@
   <data name="activity_movemouse_tooltip" xml:space="preserve">
     <value>Move mouse cursor to a location relative to an element found with GetElement (or desktop if no element supplied)</value>
   </data>
+  <data name="activity_msgbox_text" xml:space="preserve">
+    <value>message box</value>
+  </data>
   <data name="activity_offsetx" xml:space="preserve">
     <value>X Offset</value>
   </data>

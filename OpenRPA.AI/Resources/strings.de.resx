@@ -156,4 +156,19 @@
 	<data name="activity_gettext_tooltip" xml:space="preserve">
 		<value>Mit OCR kann der gesamte Text aus einem Bild abgerufen und auf ein bestimmtes Wort oder einen bestimmten Satz beschränkt werden</value>
 	</data>
+<data name="activity_getidtext_drop_hint" xml:space="preserve">
+    <value>Aktivität löschen</value>
+  </data>
+	<data name="activity_getidtext_limit" xml:space="preserve">
+    <value>Beschränken auf</value>
+  </data>
+  <data name="activity_getidtext_limit_hint" xml:space="preserve">
+    <value>Suche nur folgendes Wort</value>
+  </data>
+  <data name="activity_getidtext" xml:space="preserve">
+		<value>Text abrufen</value>
+	</data>
+	<data name="activity_getidtext_tooltip" xml:space="preserve">
+		<value>Mit OCR kann der gesamte Text aus einem Bild abgerufen und auf ein bestimmtes Wort oder einen bestimmten Satz beschränkt werden</value>
+	</data>
 </root>

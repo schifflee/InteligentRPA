@@ -80,6 +80,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenRPA.PS", "OpenRPA.ps\OpenRPA.PS.csproj", "{FED047CA-2265-4B9B-86B4-3FBF17FE580F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenRPA.AI", "OpenRPA.AI\OpenRPA.AI.csproj", "{0692AC85-E730-421F-B988-0FE77CF07022}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5CDF67D7-47F3-48CC-80C2-2573B503A0DD} = {5CDF67D7-47F3-48CC-80C2-2573B503A0DD}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -780,7 +783,7 @@ Global
 		{70E2E351-AC0D-486D-B357-B890EF20D1C8} = {8CBC9129-7A79-483A-838B-2C6FF3762B35}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		BuildVersion_StartDate = 2000/1/1
 		SolutionGuid = {40D49710-F666-4479-96E1-FFC3BA0D3D5A}
+		BuildVersion_StartDate = 2000/1/1
 	EndGlobalSection
 EndGlobal

@@ -174,4 +174,19 @@
   <data name="activity_gettext_tooltip" xml:space="preserve">
     <value>Using OCR get all text from a image, can be limited to a specific word or sentence</value>
   </data>
+<data name="activity_getidtext" xml:space="preserve">
+    <value>Get Id Text</value>
+  </data>
+  <data name="activity_getidtext_drop_hint" xml:space="preserve">
+    <value>Drop activity</value>
+  </data>
+  <data name="activity_getidtext_limit" xml:space="preserve">
+    <value>Limit to</value>
+  </data>
+  <data name="activity_getidtext_limit_hint" xml:space="preserve">
+    <value>Search only for this word</value>
+  </data>
+  <data name="activity_getidtext_tooltip" xml:space="preserve">
+    <value>Using OCR get all text from a image, can be limited to a specific word or sentence</value>
+  </data>
 </root>

@@ -16,9 +16,9 @@ using System.Windows.Media.Imaging;
 
 namespace OpenRPA.AI
 {
-    public partial class GetTextDesigner : INotifyPropertyChanged
+    public partial class GetIdTextDesigner : INotifyPropertyChanged
     {
-        public GetTextDesigner()
+        public GetIdTextDesigner()
         {
             InitializeComponent();
             HighlightImage = Extensions.GetImageSourceFromResource("search.png");

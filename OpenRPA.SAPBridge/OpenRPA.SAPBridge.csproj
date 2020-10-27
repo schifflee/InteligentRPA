@@ -41,6 +41,9 @@
     <EmbeddedResource Include="Resources\Interop.SAPFEWSELib.dll" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="SAP.GUI.Scripting.net" Version="1.0.0" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\OpenRPA.NamedPipeWrapper\OpenRPA.NamedPipeWrapper.csproj" />
   </ItemGroup>
   <ItemGroup>

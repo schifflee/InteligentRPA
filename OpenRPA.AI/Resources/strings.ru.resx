@@ -156,4 +156,20 @@
 	<data name="activity_gettext_tooltip" xml:space="preserve">
 		<value>Использование OCR позволяет получить весь текст из изображения, может быть ограничено конкретным словом или предложением</value>
 	</data>
+
+	<data name="activity_getidtext_drop_hint" xml:space="preserve">
+    <value>Прекратить работу</value>
+  </data>
+	<data name="activity_getidtext_limit" xml:space="preserve">
+    <value>Ограничить до</value>
+  </data>
+	<data name="activity_getidtext_limit_hint" xml:space="preserve">
+    <value>Искать только по этому слову</value>
+  </data>
+  <data name="activity_getidtext" xml:space="preserve">
+		<value>Получить текст</value>
+	</data>
+	<data name="activity_getidtext_tooltip" xml:space="preserve">
+		<value>Использование OCR позволяет получить весь текст из изображения, может быть ограничено конкретным словом или предложением</value>
+	</data>
 </root>
