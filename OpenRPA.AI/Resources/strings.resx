@@ -159,4 +159,19 @@
   <data name="enable_xpath_support_help" xml:space="preserve">
     <value>Enable experimental XPath support in IE</value>
   </data>
+  <data name="activity_gettext" xml:space="preserve">
+    <value>Get Text</value>
+  </data>
+  <data name="activity_gettext_drop_hint" xml:space="preserve">
+    <value>Drop activity</value>
+  </data>
+  <data name="activity_gettext_limit" xml:space="preserve">
+    <value>Limit to</value>
+  </data>
+  <data name="activity_gettext_limit_hint" xml:space="preserve">
+    <value>Search only for this word</value>
+  </data>
+  <data name="activity_gettext_tooltip" xml:space="preserve">
+    <value>Using OCR get all text from a image, can be limited to a specific word or sentence</value>
+  </data>
 </root>

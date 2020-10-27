@@ -130,30 +130,48 @@
     <value>打开选择器</value>
   </data>
   <data name="activity_getelement_tooltip" xml:space="preserve">
-    <value>查找选择器选择的Windows Java元素</value>
+    <value>查找选择器选择的Windows UI元素</value>
   </data>
-  <data name="detector_highlight" xml:space="preserve">
-    <value>高亮</value>
+  <data name="activity_openurl" xml:space="preserve">
+    <value>打开URL</value>
   </data>
-  <data name="detector_name" xml:space="preserve">
-    <value>名称</value>
+  <data name="activity_openurl_getcurrent" xml:space="preserve">
+    <value>获得当前URL</value>
   </data>
-  <data name="detector_open_selector" xml:space="preserve">
-    <value>打开选择器</value>
+  <data name="activity_openurl_tooltip" xml:space="preserve">
+    <value>在IE中打开指定的URL</value>
   </data>
-  <data name="detector_select" xml:space="preserve">
-    <value>选择</value>
+  <data name="activity_waitforready" xml:space="preserve">
+    <value>等待准备</value>
   </data>
-  <data name="detector_selector" xml:space="preserve">
-    <value>选择器</value>
+  <data name="activity_waitforready_help" xml:space="preserve">
+    <value>等待页面准备就绪，而不是加载中的装填</value>
   </data>
-  <data name="plugin_auto_launch_java_bridge" xml:space="preserve">
-    <value>自动启动</value>
+  <data name="enable_caching_browser" xml:space="preserve">
+    <value>缓存浏览器对象</value>
   </data>
-  <data name="plugin_auto_launch_java_bridge_help" xml:space="preserve">
-    <value>机器人运行时自动启动Java桥接应用程序</value>
+  <data name="enable_caching_browser_help" xml:space="preserve">
+    <value>保存浏览器对象，而不是在每次调用时搜索窗口</value>
   </data>
-  <data name="plugin_launch_java_bridge" xml:space="preserve">
-    <value>启动Java桥接</value>
+  <data name="enable_xpath_support" xml:space="preserve">
+    <value>允许XPath</value>
+  </data>
+  <data name="enable_xpath_support_help" xml:space="preserve">
+    <value>在IE中启用实验性XPath支持</value>
+  </data>
+  <data name="activity_gettext" xml:space="preserve">
+    <value>获得文本</value>
+  </data>
+  <data name="activity_gettext_drop_hint" xml:space="preserve">
+    <value>丢弃活动</value>
+  </data>
+  <data name="activity_gettext_limit" xml:space="preserve">
+    <value>限制于</value>
+  </data>
+  <data name="activity_gettext_limit_hint" xml:space="preserve">
+    <value>只搜索这个次</value>
+  </data>
+  <data name="activity_gettext_tooltip" xml:space="preserve">
+    <value>使用OCR从图像中获取所有文本，可以限制为特定的单词或句子</value>
   </data>
 </root>

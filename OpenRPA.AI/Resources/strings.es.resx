@@ -110,30 +110,30 @@
 		<value>Selector abierto</value>
 	</data>
 	<data name="activity_getelement_tooltip" xml:space="preserve">
-		<value>Encuentre un elemento Java de Windows basado en el selector</value>
+		<value>Encuentre un elemento de la IU de Windows basado en el selector</value>
 	</data>
-	<data name="detector_highlight" xml:space="preserve">
-		<value>Realce</value>
+	<data name="activity_openurl" xml:space="preserve">
+		<value>Abrir URL</value>
 	</data>
-	<data name="detector_name" xml:space="preserve">
-		<value>Nombre</value>
+	<data name="activity_openurl_getcurrent" xml:space="preserve">
+		<value>Ponerse al día</value>
 	</data>
-	<data name="detector_open_selector" xml:space="preserve">
-		<value>Selector abierto</value>
+	<data name="activity_openurl_tooltip" xml:space="preserve">
+		<value>Abra la URL especificada en Internet Explorer</value>
 	</data>
-	<data name="detector_select" xml:space="preserve">
-		<value>Seleccione</value>
+<data name="activity_gettext_drop_hint" xml:space="preserve">
+		<value>Haga doble clic para ver</value>
 	</data>
-	<data name="detector_selector" xml:space="preserve">
-		<value>Selector</value>
+	<data name="activity_gettext_limit" xml:space="preserve">
+		<value>Limitado a</value>
 	</data>
-	<data name="plugin_auto_launch_java_bridge" xml:space="preserve">
-		<value>Lanzamiento automático</value>
+	<data name="activity_gettext_limit_hint" xml:space="preserve">
+		<value>Busca solo esta palabra</value>
 	</data>
-	<data name="plugin_auto_launch_java_bridge_help" xml:space="preserve">
-		<value>Ejecución automática de la aplicación Java Bridge cuando el robot se está ejecutando</value>
+	<data name="activity_gettext" xml:space="preserve">
+		<value>Obtener texto</value>
 	</data>
-	<data name="plugin_launch_java_bridge" xml:space="preserve">
-		<value>Lanzar java bridge</value>
+	<data name="activity_gettext_tooltip" xml:space="preserve">
+		<value>El uso de OCR para obtener todo el texto de una imagen puede limitarse a una palabra u oración específica</value>
 	</data>
 </root>

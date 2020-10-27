@@ -126,34 +126,34 @@
 	<data name="activity_getelement_open_selector" xml:space="preserve">
     <value>Åben selektor</value>
   </data>
-	<data name="detector_highlight" xml:space="preserve">
-    <value>Fremhæv</value>
-  </data>
-	<data name="detector_name" xml:space="preserve">
-    <value>Navn</value>
-  </data>
-	<data name="detector_open_selector" xml:space="preserve">
-    <value>Åben selektor</value>
-  </data>
-	<data name="detector_select" xml:space="preserve">
-    <value>Vælg</value>
-  </data>
-	<data name="detector_selector" xml:space="preserve">
-    <value>Selektor</value>
+	<data name="activity_openurl_getcurrent" xml:space="preserve">
+    <value>Hent nuværende</value>
   </data>
 	<data name="activity_getelement" xml:space="preserve">
 		<value>Hent element</value>
 	</data>
 	<data name="activity_getelement_tooltip" xml:space="preserve">
-		<value>Find et Windows Java-element baseret på vælger</value>
+		<value>Find et Windows UI-element baseret på vælger</value>
 	</data>
-	<data name="plugin_auto_launch_java_bridge" xml:space="preserve">
-		<value>Automatisk lancering</value>
+	<data name="activity_openurl" xml:space="preserve">
+		<value>Åbn URL</value>
 	</data>
-	<data name="plugin_auto_launch_java_bridge_help" xml:space="preserve">
-		<value>Start automatisk java bridge-applikation, når robotten kører</value>
+	<data name="activity_openurl_tooltip" xml:space="preserve">
+		<value>Åbn den specificerede url i Internet Explorer</value>
 	</data>
-	<data name="plugin_launch_java_bridge" xml:space="preserve">
-		<value>Start java bridge</value>
+	<data name="activity_gettext" xml:space="preserve">
+		<value>Hent tekst</value>
 	</data>
+	<data name="activity_gettext_tooltip" xml:space="preserve">
+		<value>Henter al tekst fra et billede ved hjælp af OCR, kan begrænses til et specifikt ord eller sætning</value>
+	</data>
+	<data name="activity_gettext_drop_hint" xml:space="preserve">
+    <value>Slip aktiviteter her</value>
+  </data>
+	<data name="activity_gettext_limit" xml:space="preserve">
+    <value>Begræns til</value>
+  </data>
+	<data name="activity_gettext_limit_hint" xml:space="preserve">
+    <value>Søg kun efter ord</value>
+  </data>
 </root>

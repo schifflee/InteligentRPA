@@ -126,34 +126,52 @@
 	<data name="activity_getelement_open_selector" xml:space="preserve">
     <value>Abrir Seletor</value>
   </data>
-	<data name="detector_highlight" xml:space="preserve">
-    <value>Realçar</value>
-  </data>
-	<data name="detector_name" xml:space="preserve">
-    <value>Nome</value>
-  </data>
-	<data name="detector_open_selector" xml:space="preserve">
-    <value>Abrir Seletor</value>
-  </data>
-	<data name="detector_select" xml:space="preserve">
-    <value>Selecionar</value>
-  </data>
-	<data name="detector_selector" xml:space="preserve">
-    <value>Seletor</value>
+	<data name="activity_openurl_getcurrent" xml:space="preserve">
+    <value>Obter atual</value>
   </data>
 	<data name="activity_getelement" xml:space="preserve">
-		<value>Kumuha ng Elemento</value>
+		<value>Pegar Elemento</value>
 	</data>
 	<data name="activity_getelement_tooltip" xml:space="preserve">
-		<value>Encontre um elemento Java do Windows com base no seletor</value>
+		<value>Encontre um elemento de interface do usuário do Windows com base no seletor</value>
 	</data>
-	<data name="plugin_auto_launch_java_bridge" xml:space="preserve">
-		<value>Iniciar automaticamente</value>
+	<data name="activity_openurl" xml:space="preserve">
+		<value>Abrir URL</value>
 	</data>
-	<data name="plugin_auto_launch_java_bridge_help" xml:space="preserve">
-		<value>Iniciar automaticamente a aplicação java bridge quando o robô estiver em execução</value>
+	<data name="activity_openurl_tooltip" xml:space="preserve">
+		<value>Abrir URL específica no Internet Explorer</value>
 	</data>
-	<data name="plugin_launch_java_bridge" xml:space="preserve">
-		<value>Iniciar java bridge</value>
+	<data name="activity_waitforready" xml:space="preserve">
+		<value>Aguarde</value>
+	</data>
+	<data name="activity_waitforready_help" xml:space="preserve">
+		<value>Aguarde até que a pagina fique pronta / não carregando</value>
+	</data>
+	<data name="enable_caching_browser" xml:space="preserve">
+		<value>Armazenando em cache o objeto do navegador</value>
+	</data>
+	<data name="enable_caching_browser_help" xml:space="preserve">
+		<value>Salve o objeto do navegador, em vez de procurar a janela fazendo cada chamada</value>
+	</data>
+	<data name="enable_xpath_support" xml:space="preserve">
+		<value>Ativar XPath</value>
+	</data>
+	<data name="enable_xpath_support_help" xml:space="preserve">
+		<value>Ativar suporte experimental no IE para XPath</value>
+	</data>
+	<data name="activity_gettext_drop_hint" xml:space="preserve">
+    <value>Descartar atividade</value>
+  </data>
+	<data name="activity_gettext_limit" xml:space="preserve">
+    <value>Limite</value>
+  </data>
+	<data name="activity_gettext_limit_hint" xml:space="preserve">
+    <value>Localize apenas esta palavra</value>
+  </data>
+  <data name="activity_gettext" xml:space="preserve">
+		<value>Obter Texto</value>
+	</data>
+	<data name="activity_gettext_tooltip" xml:space="preserve">
+		<value>O uso do OCR obtém todo o texto de uma imagem, pode ser limitado a uma palavra ou sentença específica</value>
 	</data>
 </root>

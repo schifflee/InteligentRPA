@@ -130,30 +130,48 @@
     <value>セレクタを開く</value>
   </data>
   <data name="activity_getelement_tooltip" xml:space="preserve">
-    <value>Find an Windows Java element based on selector</value>
+    <value>セレクタを基準にWindows UI 要素を発見</value>
   </data>
-  <data name="detector_highlight" xml:space="preserve">
-    <value>強調</value>
+  <data name="activity_openurl" xml:space="preserve">
+    <value>URL を開く</value>
   </data>
-  <data name="detector_name" xml:space="preserve">
-    <value>名前</value>
+  <data name="activity_openurl_getcurrent" xml:space="preserve">
+    <value>カレントを取得</value>
   </data>
-  <data name="detector_open_selector" xml:space="preserve">
-    <value>セレクタを開く</value>
+  <data name="activity_openurl_tooltip" xml:space="preserve">
+    <value>Internet Explorer 中の特定の URL を開く</value>
   </data>
-  <data name="detector_select" xml:space="preserve">
-    <value>選択</value>
+  <data name="activity_waitforready" xml:space="preserve">
+    <value>準備状態を待機</value>
   </data>
-  <data name="detector_selector" xml:space="preserve">
-    <value>セレクタ</value>
+  <data name="activity_waitforready_help" xml:space="preserve">
+    <value>ページが準備状態つまり非ロード中になるまで待機</value>
   </data>
-  <data name="plugin_auto_launch_java_bridge" xml:space="preserve">
-    <value>自動起動</value>
+  <data name="enable_caching_browser" xml:space="preserve">
+    <value>ブラウザ・オブジェクトをキャッシュ</value>
   </data>
-  <data name="plugin_auto_launch_java_bridge_help" xml:space="preserve">
-    <value>Auto launch java bridge application when robot is running</value>
+  <data name="enable_caching_browser_help" xml:space="preserve">
+    <value>ウィンドウを各々呼び出して検索する代わりに、ブラウザ・オブジェクトを保存</value>
   </data>
-  <data name="plugin_launch_java_bridge" xml:space="preserve">
-    <value>Java ブリッジを起動</value>
+  <data name="enable_xpath_support" xml:space="preserve">
+    <value>XPath を有効化</value>
+  </data>
+  <data name="enable_xpath_support_help" xml:space="preserve">
+    <value>IE がサポートする実験的 XPath を有効化</value>
+  </data>
+<data name="activity_gettext" xml:space="preserve">
+    <value>テキストを取得</value>
+  </data>
+  <data name="activity_gettext_drop_hint" xml:space="preserve">
+    <value>アクティビティをドロップ</value>
+  </data>
+  <data name="activity_gettext_limit" xml:space="preserve">
+    <value>制限</value>
+  </data>
+  <data name="activity_gettext_limit_hint" xml:space="preserve">
+    <value>Search only for this word</value>
+  </data>
+  <data name="activity_gettext_tooltip" xml:space="preserve">
+    <value>Using OCR get all text from a image, can be limited to a specific word or sentence</value>
   </data>
 </root>
